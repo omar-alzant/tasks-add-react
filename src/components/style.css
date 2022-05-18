@@ -1,0 +1,101 @@
+:root{
+    --bck : rgb(235, 233, 233);
+    --w : 45vw;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cont{
+    background-color: var(--bck);
+    border: 2px solid rgb(77, 77, 77);
+    margin: 2vw;
+    padding: 3vw;
+    margin-top: 40px;
+    max-width: min-content;
+}
+
+.header{
+    display: flex;
+}
+
+.task-cont{
+    display: grid;
+    height: min-content;
+    gap: 20px;
+    margin: 2vw;
+    margin-top: 40px;
+}
+
+.task{
+    padding: 5px;
+    background-color: rgb(202, 204, 205);
+    border-radius: 2%;
+}
+
+.task p {
+    margin-top: 3px;
+    color: rgba(0, 0, 0, 0.663);
+}
+
+.task h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task.reminder{
+    border-left: 5px solid green ;
+}
+
+.btn{
+    border: none;
+    padding: 10px;
+    border-radius: 10%;
+    font-weight: bold;
+    color: var(--bck);
+    margin-left: calc(var(--w));
+    height: min-content;
+    cursor: pointer;
+}
+
+
+form{
+    display: grid;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid green;
+}
+
+form label {
+    margin-bottom: 5px ;
+    margin-top: 20px;
+}
+
+form input {
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.btn-add{
+    border: none;
+    padding: 10px;
+    border-radius: 70% 70%;
+    font-weight: bold;
+    margin-top: 20px;
+    background-color: rgb(53, 52, 52);
+    color: white;
+    height: min-content;
+    cursor: pointer;
+}
+
+footer, .about{
+    margin-top: 60px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
