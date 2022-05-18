@@ -15,10 +15,10 @@ function App() {
   useEffect(() => {
     const getTasks = async () => {
       const tasksFromServer = await fetchTasks();
-      await setTasks(tasksFromServer);
+      setTasks(tasksFromServer);
     };
 
-    getTasks();
+    getTasks()
   }, []);
 
   // Fetch Data
@@ -70,7 +70,7 @@ function App() {
       tasks.map((task) =>
         task.id === id ? { ...task, reminder: data.reminder } : task
       )
-    );
+    )
   };
 
   // Add Tasks
@@ -113,10 +113,15 @@ function App() {
   // with JSON
 
   const deleteTaskJSON = async (id) => {
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    const res = await  fetch(`http://localhost:5000/tasks/${id}`, {
       method: "DELETE",
     });
-  };
+
+    res.status === 200 
+    ? setTasks(tasks.filter((task)=>task.id !== id))
+    : alert('Error Deleting this Task')
+  }
+
   ///////////////////////////////////////////////
 
   return (
@@ -137,7 +142,9 @@ function App() {
                     tasks={tasks}
                     // onDelete={deleteTask}
                     onDelete={deleteTaskJSON}
-                    onToggle={toggleReminderJSON} />
+                    onToggle={toggleReminderJSON} 
+
+                  />
                 ) : (
                   "No Tasks To Show"
                 )}
