@@ -41,14 +41,14 @@ function App() {
 
   //  without JSON
 
-  const toggleReminder = (id) => {
-    // console.log(id);
-    setTasks(
-      tasks.map((task) =>
-        task.id === id ? { ...task, reminder: !task.reminder } : task
-      )
-    );
-  };
+  // const toggleReminder = (id) => {
+  //   // console.log(id);
+  //   setTasks(
+  //     tasks.map((task) =>
+  //       task.id === id ? { ...task, reminder: !task.reminder } : task
+  //     )
+  //   );
+  // };
 
   // with JSON
 
@@ -76,11 +76,11 @@ function App() {
   // Add Tasks
 
   // without Json
-  const addTask = (task) => {
-    let id = Math.floor(Math.random() * 10000) + 1;
-    const newTask = { id, ...task };
-    setTasks([...tasks, newTask]);
-  };
+  // const addTask = (task) => {
+  //   let id = Math.floor(Math.random() * 10000) + 1;
+  //   const newTask = { id, ...task };
+  //   setTasks([...tasks, newTask]);
+  // };
 
   // with JSON
 
@@ -105,10 +105,10 @@ function App() {
   // without JSON
 
   // Delete Task
-  const deleteTask = (id) => {
-    // console.log("delete",id);
-    setTasks(tasks.filter((task) => task.id !== id));
-  };
+  // const deleteTask = (id) => {
+  //   // console.log("delete",id);
+  //   setTasks(tasks.filter((task) => task.id !== id));
+  // };
 
   // with JSON
 
